@@ -14,7 +14,7 @@ long_description_content_type = 'text/markdown'
 
 setup(
     name='py_file_type',
-    version='1.0.0',
+    version='0.1.0',
     author='riad-azz',
     author_email='riadh.azzoun@hotmail.com',
     description='Wrapper for python-magic that includes necessary bin files.',
@@ -26,6 +26,9 @@ setup(
     },
     packages=find_packages(exclude=["docs", "tests"]),
     license="MIT License",
+    keywords=["python-magic wrapper", "python-magic-bin", "python-magic binaries", "libmagic"],
+    data_files=[('py_file_type', ['./py_file_type/libmagic/libmagic.dll', './py_file_type/libmagic/magic.mgc'])],
+    include_package_data=True,
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
@@ -33,8 +36,5 @@ setup(
         "Programming Language :: Python :: 3.11",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Topic :: Software Development"
-        "Topic :: Software Development :: Libraries"
-        "Topic :: Software Development :: Libraries :: Python Modules"
     ],
 )
